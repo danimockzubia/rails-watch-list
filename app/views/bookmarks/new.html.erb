@@ -1,0 +1,28 @@
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+  <body>
+    <div class='nav' id="header">
+    <h3>Bookmarks</h3>
+    </div>
+    <div class='container'>
+      <form>
+        <div class="form-group">
+          <%= simple_form_for [ @list, @bookmark ] do |f| %>
+            <%= f.label :comment %>
+            <%= f.text_field :comment %>
+            <br>
+            <%= f.submit %>
+          <% end %>
+        </div>
+      </form>
+    </div>
+  </body>
+
+<%= link_to "Go back", lists_path%>
