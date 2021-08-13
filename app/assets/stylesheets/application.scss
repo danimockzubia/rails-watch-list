@@ -14,19 +14,68 @@
 @import "bookmarks.scss";
 @import "lists.scss";
 
-.movie-img {
-    height: 300px;
-    width: 240px;
+body {
+  background-color: white;
 }
 
-.cardcategory {
-  height: 300px;
-  width: 250px;
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style-type: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 20px;
+
+}
+
+a {
+  color: rgb(57, 64, 71);
+}
+// .col-4 {
+//   // display: flex;
+// }
+
+.cards {
   border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(190, 188, 188);
+  // padding: 20px;
 }
 
-.btn {
-  background-color: rgb(42, 42, 245);
-  border-radius: 10px;
-  color: white;
+.movie-image {
+  background-size: cover;
+}
+
+.content-card {
+  padding: 20px;
+  background-size: cover;
+}
+
+.col-4 {
+  margin-bottom: 20px;
+}
+
+.navbar {
+  padding: 20px;
+  background-color: cornflowerblue;
+}
+
+.navbar-brand {
+  padding: 10px;
+  font-size: xx-large;
+}
+
+.bg-white {
+  background-size: cover;
+}
+
+.button-card {
+  background-color: #e8edf1 ;
+  padding: 20px;
 }
