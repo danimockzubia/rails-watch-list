@@ -11,3 +11,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "bookmarks.scss";
+@import "lists.scss";
+
+.movie-img {
+    height: 300px;
+    width: 240px;
+}
