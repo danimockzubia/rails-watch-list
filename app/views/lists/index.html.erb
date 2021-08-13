@@ -10,14 +10,13 @@
     <%= link_to 'Create a movie list', new_list_path, class: 'btn btn-flat' %>
   </div>
   <div class="row">
-    <% @lists.each do |list| %>
-      <div class="co-12 colsm-6 col-md-4">
-        <%= link_to list_path(list), class:'text-decoration-none' do %>
-        <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
-            <%= list.name %>
-          </div>
-        <% end %>
-      </div>
+  <% @lists.each do |list| %>
+        <% if list.photo.attached?%>
+        <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path list.photo.key, height: 300, width: 400, crop: :fill %>')">
+          <%= link_to list.name, list_path(list), class: "nav-link" %>
+          <% else%>
+          <% end %>
+        </li>
     <% end %>
   </div>
 </div>
